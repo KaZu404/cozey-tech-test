@@ -1,8 +1,16 @@
-import { Controller, Get } from '@nestjs/common';
+import {
+  BadRequestException,
+  Body,
+  Controller,
+  Get,
+  Post,
+} from '@nestjs/common';
 import { AppService } from './services/app.service';
-import { Order } from './models/order';
+import { CustomerOrderDto, Order } from './models/order';
 import { LineItem } from './models/lineItem';
 import { Product } from './models/product';
+
+import { randomUUID } from 'crypto';
 
 @Controller()
 export class AppController {
@@ -11,6 +19,31 @@ export class AppController {
   @Get('/customer/line-items')
   getCustomerLineItems(): LineItem[] {
     return this.appService.getLineItems();
+  }
+
+  @Post('/customer/order')
+  postCustomerOrder(@Body() customerOrder: CustomerOrderDto) {
+    if (customerOrder.lineItems.length === 0) {
+      throw new BadRequestException({
+        message: 'No items in order, please select one',
+      });
+    }
+
+    const lineItems = this.appService.getLineItems();
+
+    const orderLineItems = customerOrder.lineItems.map((orderLineItemUuid) =>
+      lineItems.find(({ uuid }) => uuid === orderLineItemUuid),
+    );
+
+    this.appService.postOrder({
+      uuid: randomUUID(),
+      total: orderLineItems.reduce((current, next) => current + next.price, 0),
+      date: new Date(),
+      shippingAddress: customerOrder.shippingAddress,
+      customerName: customerOrder.customerName,
+      customerEmail: customerOrder.customerEmail,
+      lineItems: orderLineItems,
+    });
   }
 
   @Get('/packing-team/orders')

@@ -1,0 +1,20 @@
+meta {
+  name: Place an order
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/customer/order
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "shippingAddress": "newShipping",
+    "customerName": "name",
+    "customerEmail": "email",
+    "lineItems": ["7931623b-4911-4b1b-9488-0869d6ad13ae", "7931623b-4911-4b1b-9488-0869d6ad13ae"]
+  }
+}

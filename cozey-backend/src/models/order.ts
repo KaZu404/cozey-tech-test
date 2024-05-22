@@ -9,3 +9,10 @@ export class Order {
   customerEmail: string;
   lineItems: LineItem[];
 }
+
+export class CustomerOrderDto {
+  shippingAddress: string;
+  customerName: string;
+  customerEmail: string;
+  lineItems: string[];
+}
