@@ -1,22 +1,25 @@
 <template>
-    <div>
-        <h1>Picking team</h1>
+  <div>
+    <h1>Picking team</h1>
 
-        <!-- Add form with required elements -->
-        <!-- Load items from backend-->
+    <div v-for="product in products">
+      <div>"{{ product.product.name }}" -> x{{ product.count }}</div>
     </div>
-  </template>
-  
-<script lang="ts">
+  </div>
+</template>
 
+<script>
 export default {
   data() {
-
+    return {
+      products: [],
+    };
   },
 
-  mounted() {
-
-  }
+  async mounted() {
+    this.products = await $fetch(
+      "http://localhost:3000/product-picking-team/orders-products"
+    );
+  },
 };
-
 </script>
