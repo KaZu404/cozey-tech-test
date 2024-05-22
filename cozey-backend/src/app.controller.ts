@@ -19,7 +19,7 @@ export class AppController {
   }
 
   @Get('/product-picking-team/orders-products')
-  getOrders(): { product: Product; count: number }[] {
+  getProductPickingTeamOrdersProducts(): { product: Product; count: number }[] {
     const orders = this.appService.getOrders();
 
     const allProductsInOrders = orders
