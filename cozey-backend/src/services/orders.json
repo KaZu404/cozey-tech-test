@@ -1,0 +1,31 @@
+{
+  "orders": [
+    {
+      "uuid": "d76864d1-1441-487d-ad71-88ebed10c8f0",
+      "total": 10,
+      "date": "2024-05-22T10:00:12.345Z",
+      "shippingAddress": "123 Example Street, Toronto, ON M1N 2P3, Canada",
+      "customerName": "Emily Jackson",
+      "customerEmail": "emily.jackson@gmail.com",
+      "lineItems": ["587b1cd1-d6b0-4cb0-ae9e-b62b09952126"]
+    },
+    {
+      "uuid": "bfde934d-0859-4743-9377-7f7b6b8ba4de",
+      "total": 10,
+      "date": "2024-05-22T10:00:12.345Z",
+      "shippingAddress": "456 Sample Avenue, Montreal, QC H2X 3P5, Canada",
+      "customerName": "Michael Thompson",
+      "customerEmail": "michael.thompson@gmail.com",
+      "lineItems": ["7931623b-4911-4b1b-9488-0869d6ad13ae"]
+    },
+    {
+      "uuid": "5f762e7f-4e86-436d-b331-589453484c61",
+      "total": 10,
+      "date": "2024-05-22T10:00:12.345Z",
+      "shippingAddress": "123 Example Street, Toronto, ON M1N 2P3, Canada",
+      "customerName": "Olivia Martinez",
+      "customerEmail": "olivia.martinez@gmail.com",
+      "lineItems": ["fe0bfcc3-b264-4ace-ac76-5b0bc5b36cbb"]
+    }
+  ]
+}

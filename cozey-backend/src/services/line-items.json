@@ -1,0 +1,53 @@
+{
+  "line-items": [
+    {
+      "uuid": "587b1cd1-d6b0-4cb0-ae9e-b62b09952126",
+      "name": "Valentines Box",
+      "price": 15,
+      "products": [
+        {
+          "uuid": "587b1cd1-d6b0-4cb0-ae9e-b62b09952126",
+          "name": "Red Roses Bouquet"
+        },
+        {
+          "uuid": "461dba38-5f58-4fe4-9a07-0aae9eb7c748",
+          "name": "Box of chocolates"
+        },
+        {
+          "uuid": "351a1b63-39fb-468b-9688-ea0760e831cb",
+          "name": "Bottle of wine"
+        }
+      ]
+    },
+    {
+      "uuid": "7931623b-4911-4b1b-9488-0869d6ad13ae",
+      "name": "Birthday Box",
+      "price": 10,
+      "products": [
+        {
+          "uuid": "0ed58a04-5729-46cc-a539-6409874d9e7b",
+          "name": "$100 Visa Gift Card"
+        },
+        {
+          "uuid": "351a1b63-39fb-468b-9688-ea0760e831cb",
+          "name": "Bottle of wine"
+        }
+      ]
+    },
+    {
+      "uuid": "fe0bfcc3-b264-4ace-ac76-5b0bc5b36cbb",
+      "name": "Client Gift Box",
+      "price": 20,
+      "products": [
+        {
+          "uuid": "461dba38-5f58-4fe4-9a07-0aae9eb7c748",
+          "name": "Box of chocolates"
+        },
+        {
+          "uuid": "351a1b63-39fb-468b-9688-ea0760e831cb",
+          "name": "Bottle of wine"
+        }
+      ]
+    }
+  ]
+}
